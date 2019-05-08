@@ -75,63 +75,6 @@ app.get('/about', function(req, res){
     res.render('about');
 });
 
-//connect home.html to home.css
-app.get('/public/css/home.css', function(req, res){
-    res.sendFile('public/css/home.css', {root: __dirname});
-});
-
-// return login.html file
-app.get('/login', function(req, res) {
-    res.sendFile('public/html/login.html', {root: __dirname});
-});
-
-// return login.html file from home page
-app.get('/public/html/login.html', function(req, res) {
-    res.sendFile('public/html/login.html', {root: __dirname});
-});
-
-//connect login.html to login.css
-app.get('/public/css/login.css', function(req, res){
-    res.sendFile('public/css/login.css', {root: __dirname});
-});
-
-//connect login.js to login.css
-app.get('/public/html/login.js', function(req, res){
-    res.sendFile('login.js', {root: __dirname});
-});
-app.get('/login.js', function(req, res){
-    res.sendFile('login.js', {root: __dirname});
-});
-
-// return register.html file
-app.get('/register', function(req, res) {
-    res.sendFile('public/html/register.html', {root: __dirname});
-});
-
-//connect register.css
-app.get('/css/register.css', function(req, res){
-    res.sendFile('public/css/register.css', {root: __dirname});
-});
-
-//connect to register.js
-app.get('/register.js', function(req, res){
-    res.sendFile('register.js', {root: __dirname});
-});
-app.get('/public/html/register.js', function(req, res){
-    res.sendFile('register.js', {root: __dirname});
-});
-
-// return register.html file from login page
-app.get('/public/html/register.html', function(req, res) {
-    res.sendFile('public/html/register.html', {root: __dirname});
-});
-
-// return to home page from register page
-app.get('/public/html/home.html', function(req, res) {
-    res.sendFile('public/html/home.html', {root: __dirname});
-});
-
-
 //accept path "createTask"
 app.post('/createTask', function(req, res) {
 
